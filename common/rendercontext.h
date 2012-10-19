@@ -13,14 +13,15 @@ public:
     bool makeCurrent();
     bool swapBuffers();
 
-    void draw();
-
 protected:
-    EGLDisplay display;
-    EGLContext context;
-    EGLSurface surface;
-    EGLConfig config;
-    EGLNativeWindowType window;
+    RenderContext() { }
+    virtual EGLSurface createSurface() = 0;
+
+    EGLDisplay m_display;
+    EGLContext m_context;
+    EGLSurface m_surface;
+    EGLConfig m_config;
+    EGLNativeWindowType m_window;
 };
 
 #endif // RENDERCONTEXT_H
