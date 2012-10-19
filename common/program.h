@@ -18,8 +18,8 @@ public:
     GLuint program() const { return m_program; }
     void use();
 
-    FragmentShader fragmentShader() const;
-    VertexShader vertexShader() const;
+    FragmentShader *fragmentShader() const { return m_fragmentShader; }
+    VertexShader *vertexShader() const { return m_vertexShader; }
 
 protected:
     virtual void bindAttributes() { }

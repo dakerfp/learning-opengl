@@ -26,6 +26,11 @@ Program::Program(VertexShader *vertexShader, FragmentShader *fragmentShader)
     }
 }
 
+void Program::use()
+{
+    return glUseProgram(m_program);
+}
+
 bool Program::link()
 {
     GLint linked;
