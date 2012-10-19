@@ -4,7 +4,12 @@ LIBS=-lGLESv2
 CXXFLAGS=-Wall
 INC_DIRS=
 
+all: shader.o program.o
+
 shader.o: shader.cpp
+	$(CXX) $(CXXFLAGS) $(LIBS) -c $(?) -o $(@)
+
+program.o: program.cpp
 	$(CXX) $(CXXFLAGS) $(LIBS) -c $(?) -o $(@)
 
 clean:

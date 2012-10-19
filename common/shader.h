@@ -13,7 +13,7 @@ public:
     Shader(const GLchar** source, GLuint shader);
     ~Shader();
 
-    GLint shaderRef() const { return m_shader; }
+    GLint shader() const { return m_shader; }
     bool compiled() const { return m_compiled; }
     virtual GLuint type() const = 0;
 
